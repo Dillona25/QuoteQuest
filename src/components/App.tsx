@@ -1,8 +1,10 @@
+import { Welcome } from "../routes/Welcome";
+
 function App() {
   return (
-    <>
-      <div></div>
-    </>
+    <div>
+      <Welcome />
+    </div>
   );
 }
 
