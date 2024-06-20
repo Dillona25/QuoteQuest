@@ -33,9 +33,17 @@ function App() {
             }
           />
         </Routes>
-        {activeModal === "Login" && <LoginModal closeModal={closeModal} />}
+        {activeModal === "Login" && (
+          <LoginModal
+            handleRegisterModal={handleRegisterModal}
+            closeModal={closeModal}
+          />
+        )}
         {activeModal === "Register" && (
-          <RegisterModal closeModal={closeModal} />
+          <RegisterModal
+            closeModal={closeModal}
+            handleSigninModal={handleSigninModal}
+          />
         )}
       </div>
     </Router>

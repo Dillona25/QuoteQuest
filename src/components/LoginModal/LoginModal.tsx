@@ -5,7 +5,13 @@ import { Label } from "../Form/Label";
 import { Modal } from "../Modal/Modal";
 import { IoClose } from "react-icons/io5";
 
-export const LoginModal = ({ closeModal }: { closeModal?: () => void }) => {
+export const LoginModal = ({
+  closeModal,
+  handleRegisterModal,
+}: {
+  closeModal?: () => void;
+  handleRegisterModal?: () => void;
+}) => {
   return (
     <Modal>
       <IoClose
@@ -23,7 +29,12 @@ export const LoginModal = ({ closeModal }: { closeModal?: () => void }) => {
         <ButtonPrimary text="Login" />
         <p className="font-Inter mt-7 text-center text-gray-500">
           Or sign in{" "}
-          <button className="underline underline-offset-2">here</button>
+          <button
+            onClick={handleRegisterModal}
+            className="underline underline-offset-2"
+          >
+            here
+          </button>
         </p>
       </Form>
     </Modal>
