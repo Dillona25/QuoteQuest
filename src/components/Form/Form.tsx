@@ -15,7 +15,7 @@ export const Form = ({
     <form
       ref={ref}
       onSubmit={onSubmit}
-      className={`flex flex-col gap-10 w-[350px] ${className}`}
+      className={`flex flex-col w-[350px] ${className}`}
     >
       {children}
     </form>
