@@ -3,9 +3,12 @@ import { Welcome } from "../routes/Welcome";
 import { useState } from "react";
 import { LoginModal } from "./LoginModal/LoginModal";
 import { RegisterModal } from "./RegisterModal/RegisterModal";
+import { Home } from "../routes/Home";
+import { ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
+  const [isLoggedIn] = useState(true);
 
   const closeModal = () => {
     setActiveModal("");
@@ -24,7 +27,7 @@ function App() {
       <div className="realtive flex flex-col items-center justify-center m-auto overflow-hidden">
         <Routes>
           <Route
-            path="/"
+            path="/Welcome"
             element={
               <Welcome
                 handleSigninModal={handleSigninModal}
@@ -32,6 +35,9 @@ function App() {
               />
             }
           />
+          <Route element={<ProtectedRoute isLoggedIn={isLoggedIn} />}>
+            <Route path="/" element={<Home />} />
+          </Route>
         </Routes>
         {activeModal === "Login" && (
           <LoginModal
