@@ -1,4 +1,4 @@
-import { ButtonPrimary } from "../Buttons/Buttons";
+import { Button } from "../Buttons/Button";
 import { Form } from "../Form/Form";
 import { Input } from "../Form/Input";
 import { Label } from "../Form/Label";
@@ -38,7 +38,7 @@ export const RegisterModal = ({
         <Input placeholder="Enter your email" />
         <Label>Your Password</Label>
         <Input type="password" placeholder="Enter your Password" />
-        <ButtonPrimary text="Login" />
+        <Button variant="primary" text="Create Account" />
         <p className="font-Inter mt-7 text-center text-gray-500">
           Or login in{" "}
           <button

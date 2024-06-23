@@ -1,4 +1,5 @@
-import { ButtonPrimary, ButtonSecondary } from "../components/Buttons/Buttons";
+import { Button } from "../components/Buttons/Button";
+import { FaLocationArrow } from "react-icons/fa";
 
 export const Welcome = ({
   handleSigninModal,
@@ -23,8 +24,17 @@ export const Welcome = ({
             fingers all while enjoy some ✨ inspiration ✨
           </p>
           <div className="flex justify-center gap-7">
-            <ButtonPrimary onClick={handleSigninModal} text="Login" />
-            <ButtonSecondary onClick={handleRegisterModal} text="Signup" />
+            <Button
+              variant="primary"
+              onClick={handleSigninModal}
+              text="Login"
+              icon={<FaLocationArrow />}
+            />
+            <Button
+              variant="secondary"
+              onClick={handleRegisterModal}
+              text="Signup"
+            />
           </div>
         </div>
         <div className="bg-[#D9D9D9] rounded-2xl w-[595px] h-[405px] flex items-center justify-center">

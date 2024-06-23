@@ -40,9 +40,10 @@ function App() {
             <Route
               path="/"
               element={
-                <>
-                  <Navbar /> <Home />{" "}
-                </>
+                <div className="flex flex-col justify-center items-center h-screen">
+                  <Navbar />
+                  <Home />
+                </div>
               }
             />
           </Route>

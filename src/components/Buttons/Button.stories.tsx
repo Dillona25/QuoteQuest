@@ -1,4 +1,4 @@
-import { ButtonPrimary, ButtonSecondary } from "../Buttons/Buttons";
+import { ButtonPrimary, ButtonSecondary } from "./Button";
 
 export default {
   title: "Buttons",

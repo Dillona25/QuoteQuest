@@ -1,9 +1,10 @@
-import { ButtonPrimary } from "../Buttons/Buttons";
+import { Button } from "../Buttons/Button";
 import { Form } from "../Form/Form";
 import { Input } from "../Form/Input";
 import { Label } from "../Form/Label";
 import { Modal } from "../Modal/Modal";
 import { IoClose } from "react-icons/io5";
+import { FaLocationArrow } from "react-icons/fa";
 
 export const LoginModal = ({
   closeModal,
@@ -26,7 +27,12 @@ export const LoginModal = ({
         <Input placeholder="Enter your email" />
         <Label>Your Password</Label>
         <Input type="password" placeholder="Enter your Password" />
-        <ButtonPrimary text="Login" />
+        <Button
+          variant="primary"
+          text="Login"
+          className="gap-4"
+          icon={<FaLocationArrow />}
+        />
         <p className="font-Inter mt-7 text-center text-gray-500">
           Or sign in{" "}
           <button
