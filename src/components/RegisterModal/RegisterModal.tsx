@@ -16,7 +16,7 @@ export const RegisterModal = ({
     <Modal>
       <IoClose
         onClick={closeModal}
-        className="absolute top-[-40px] right-[-40px] text-4xl cursor-pointer hover:scale-125 ease-in-out duration-75"
+        className="absolute top-[-40px] text-white right-[-40px] text-4xl cursor-pointer hover:scale-125 ease-in-out duration-75"
       />
       <h1 className="font-Rubik text-[50px] text-center text-Purple mb-7">
         Signup

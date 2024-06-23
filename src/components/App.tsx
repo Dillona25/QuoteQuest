@@ -5,6 +5,7 @@ import { LoginModal } from "./LoginModal/LoginModal";
 import { RegisterModal } from "./RegisterModal/RegisterModal";
 import { Home } from "../routes/Home";
 import { ProtectedRoute } from "./ProtectedRoute/ProtectedRoute";
+import Navbar from "./Navbar/Navbar";
 
 function App() {
   const [activeModal, setActiveModal] = useState("");
@@ -24,7 +25,7 @@ function App() {
 
   return (
     <Router>
-      <div className="realtive flex flex-col items-center justify-center m-auto overflow-hidden">
+      <div className="realtive flex flex-col items-center justify-center m-auto overflow-hidden max-w-[1400px]">
         <Routes>
           <Route
             path="/Welcome"
@@ -36,7 +37,14 @@ function App() {
             }
           />
           <Route element={<ProtectedRoute isLoggedIn={isLoggedIn} />}>
-            <Route path="/" element={<Home />} />
+            <Route
+              path="/"
+              element={
+                <>
+                  <Navbar /> <Home />{" "}
+                </>
+              }
+            />
           </Route>
         </Routes>
         {activeModal === "Login" && (

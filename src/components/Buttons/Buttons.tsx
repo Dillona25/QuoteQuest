@@ -37,3 +37,22 @@ export const ButtonSecondary = ({
     </button>
   );
 };
+
+export const ButtonMenu = ({
+  className,
+  text,
+  onClick,
+}: {
+  className?: string;
+  text?: string;
+  onClick?: MouseEventHandler;
+}) => {
+  return (
+    <button
+      onClick={onClick}
+      className={`bg-black rounded-xl p-3 font-Inter text-white hover:scale-105 ease-in-out duration-75 ${className}`}
+    >
+      {text}
+    </button>
+  );
+};
